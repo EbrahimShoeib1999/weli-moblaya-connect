@@ -116,6 +116,10 @@ All colors MUST be HSL.
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-wood-dark bg-clip-text text-transparent;
   }
+  
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent to-blue-accent bg-clip-text text-transparent;
+  }
 
   .shadow-elegant {
     box-shadow: var(--shadow-elegant);
@@ -124,8 +128,27 @@ All colors MUST be HSL.
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
+  
+  .shadow-glow {
+    box-shadow: 0 0 30px hsl(var(--accent) / 0.3);
+  }
 
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+  
+  .backdrop-blur-glass {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .card-hover {
+    @apply hover:shadow-elegant hover:-translate-y-1 transition-all duration-300;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
